@@ -3,6 +3,7 @@ python:
  - "3.9"
 install:
   - pip install requests
+  - pip install urllib3==1.26.8
 # command to run tests
 script:
  - python -m unittest test_api
