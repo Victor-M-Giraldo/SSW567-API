@@ -27,4 +27,3 @@ def get_commits_count(user):
     else:
         return f"Failed to retrieve repositories. Status code: {repos.status_code}"
 
-print(get_commits_count("richkempinski"))
