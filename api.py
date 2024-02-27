@@ -1,8 +1,12 @@
 import requests
+import re
 
 def get_commits_count(user):
     if not isinstance(user, str):
         return "Invalid input. User must be a string."
+    
+    if not re.match(r'^[A-Za-z0-9-]+$', user):
+        return "Invalid input. Github usernames can only contain alphanumeric characters or -'s"
 
     # setup the GITHUB URL with the user
     GITHUB_REPOS_URL_WITH_USER = "https://api.github.com/users/{user}/repos"
